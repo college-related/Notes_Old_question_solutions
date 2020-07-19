@@ -23,11 +23,13 @@
 - To make a package use the package command as the first statement in the java file.
 
 Syntax:
+
     package package_name; {where package_name is the folder name usually}
 
 - To use a class from a package use import command in the required file.
 
 Syntax:
+
     import packge_name.ClassName;
 
 >Difference between interface and abstract classes:-
