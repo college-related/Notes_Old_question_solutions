@@ -47,13 +47,13 @@
 	-  `Private method` cannot be inherited, hence trying to override a private method only creates a new private method for the child class.
 - **Though static and private methods can be overloaded** 
 
-[Example]()
+[Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/PrivateStatic.java)
 
 ## 2b,
 
 >Difference between interface and abstract class
 
-[2011-fall/answer]()
+[2011-fall/answer](https://github.com/Alson33/All_Code_Subject_Notes/tree/master/3rd-Semester/JAVA/Old_Questions/2011-fall#1b)
 
 ##  3a,
 
@@ -81,7 +81,7 @@
 			}
 		}
 - Now we can use the *ClassNameException* Exception class where ever we need it.
-[Example]()
+[Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/CustomException.java)
 
 ## 3b,
 
@@ -92,11 +92,11 @@
 |They are the java program that runs on a browser.|They are the java program that runs on a Java runtime environment.|
 |They don't need a main method to start the program.|They need a main method to start the program.|
 
-[Create Applet program]()
+[Create Applet program](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/AudioDemo.java)
 
 ##  4a,
 
-[Create swing GUI]()
+[Create swing GUI](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/UpperCaseDemo.java)
 
 ## 4b,
 
