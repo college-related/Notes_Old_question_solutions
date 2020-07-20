@@ -30,7 +30,7 @@
 - **Protected**: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
 
 
-[Example]()
+[Example](https://github.com/Alson33/All_Code_Subject_Notes/tree/master/3rd-Semester/JAVA/Old_Questions/2018-spring/scope-modifier-solution)
 
 ##  2a,
 
