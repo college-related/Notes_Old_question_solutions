@@ -29,9 +29,9 @@ public class UpperCaseDemo implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String str = tf.getText().toUpperCase();
+		String str = tf.getText().toUpperCase(); // Makes the text inside the textfield to UpperCase
 		tf.setText(str);
-		tf.setBackground(Color.BLUE);
+		tf.setBackground(Color.BLUE); // Makes the background color of Textfield to Blue.
 	}
 
 	public static void main(String[] args) {
