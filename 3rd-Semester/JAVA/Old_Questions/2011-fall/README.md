@@ -1,5 +1,7 @@
 # 2011 - FALL
 
+[1a](#1a) | [1b](#1b) | [2a](#2a) | [2b](#2b) | [3a](#3a) | [3b](#3b) | [41](#41) | [4b](#4b) | [5a](#5a) | [5b](#5b) | [6a](#6a) | [6b](#6b) | [7](#7)
+
 ## 1a,
 
 >JVM is used for:- 
@@ -80,6 +82,11 @@ Syntax:
 
 ## 4a,
 
+[Difference between applet and java program/application](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring#3b)
+
+[Image in a applet]()
+
+[sound in a applet](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/AudioDemo.java)
 
 ## 4b,
 
@@ -93,7 +100,7 @@ Syntax:
 
 >Multicasting
 
-- 
+- Multicasting is a model that allows the same event listener to be reacted by several event sources and vice versa.
 
 >Layout Manager classes (explain any two)
 
@@ -119,8 +126,10 @@ Syntax:
 
 >Static member variable
 
+- Static member variable are a kind of variable that has only one refrence for all the objects of the class.
+- `static` keyword is used to create a static member variable.
 - 
 
 >Swing
 
-- 
+- Swing is a GUI toolkit
