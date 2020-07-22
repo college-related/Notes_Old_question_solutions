@@ -163,22 +163,22 @@
 		
 	|**State**|**Action**|
 	|---|---|
-	|image|A node has been inserted into the right subtree of the left subtree. This makes **C** an unbalanced node. These scenarios cause AVL tree to perform left-right rotation.|
-	|image|We first perform the left rotation on the left subtree of **C**. This makes **A**, the left subtree of **B**.|
-	|image|Node **C** is still unbalanced, however now, it is because of the left-subtree of the left-subtree.|
-	|image|We shall now right-rotate the tree, making **B** the new root node of this subtree. **C** now becomes the right subtree of its own left subtree.|
-	|image|The tree is now balanced|
+	|![Image](../../Images/right_subtree_of_left_subtree.jpg)|A node has been inserted into the right subtree of the left subtree. This makes **C** an unbalanced node. These scenarios cause AVL tree to perform left-right rotation.|
+	|![Image](../../Images/subtree_left_rotation.jpg)|We first perform the left rotation on the left subtree of **C**. This makes **A**, the left subtree of **B**.|
+	|![Image](../../Images/left_unbalanced_tree.jpg)|Node **C** is still unbalanced, however now, it is because of the left-subtree of the left-subtree.|
+	|![Image](../../Images/right_rotation.jpg)|We shall now right-rotate the tree, making **B** the new root node of this subtree. **C** now becomes the right subtree of its own left subtree.|
+	|![Image](../../Images/balanced_avl_tree.jpg)|The tree is now balanced|
 	
 	- **Right-Left Rotation**
 		- A right-left rotation is a combination of right rotation followed by left rotation.
 
 	|**State**|**Action**|
 	|---|---|
-	|image|A node has been inserted into the left subtree of the right subtree. This makes **A**, an unbalanced node with balance factor 2.|
-	|image|First, we perform the right rotation along **C** node, making **C** the right subtree of its own left subtree **B**. Now, **B** becomes the right subtree of **A**.|
-	|image|Node **A** is still unbalanced because of the right subtree of its right subtree and requires a left rotation.|
-	|image|A left rotation is performed by making **B** the new root node of the subtree. **A** becomes the left subtree of its right subtree **B**.|
-	|image|The tree is now balanced|
+	|![Image](../../Images/left_subtree_of_right_subtree.jpg)|A node has been inserted into the left subtree of the right subtree. This makes **A**, an unbalanced node with balance factor 2.|
+	|![Image](../../Images/subtree_right_rotation.jpg)|First, we perform the right rotation along **C** node, making **C** the right subtree of its own left subtree **B**. Now, **B** becomes the right subtree of **A**.|
+	|![Image](../../Images/right_unbalanced_tree.jpg)|Node **A** is still unbalanced because of the right subtree of its right subtree and requires a left rotation.|
+	|![Image](../../Images/left_rotation.jpg)|A left rotation is performed by making **B** the new root node of the subtree. **A** becomes the left subtree of its right subtree **B**.|
+	|![Image](../../Images/balanced_avl_tree.jpg)|The tree is now balanced|
 
 ## 3b,
 
