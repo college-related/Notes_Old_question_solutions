@@ -91,6 +91,7 @@
 |-----|---|
 |They are the java program that runs on a browser.|They are the java program that runs on a Java runtime environment.|
 |They don't need a main method to start the program.|They need a main method to start the program.|
+|They need HTML file as they run on browser.|They don't need a HTML file.|
 
 [Create Applet program](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/AudioDemo.java)
 
@@ -121,7 +122,7 @@
 |It provides extensive error handling mechanism.|It provides only basic error checking mechanism.|
 |It is slower than UDP.|It is faster than TCP.|
 |It is used by HTTP, FTP, etc.|It is used by DNS, TFTP, etc.|
-
+|TCP has a (20-80) bytes variable length.|UDP has a 8 byte fixed length header.|
 
 >InetAddress class
 
@@ -152,6 +153,14 @@
 -   Enables easier batch updates.
 
 >JDBC database connection pool 
+
+- Connection pooling means that connections are reused rather than created each time a connection is requested.
+- It helps to improve the performance of the program.
+- In JDBC a memory chace of database connections called connection pool is maintained by a conncetion pooling module as a layer on top of any standard JDBC driver product.
+
+>Setting up JDBC database connection pool
+
+[Connection pool]()
 
 ## 6b,
 

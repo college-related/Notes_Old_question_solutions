@@ -285,7 +285,10 @@
 
 |**Static list**|**Dynamic list**|
 |---|--|
-|||
+|The memory allocaion is done during compile time.|The memory allocation is done during run time.|
+|Data is stored in stack.|Data is stored in heap.|
+|Data cannot be changed during the program.|Data are determinted during the program.|
+|The max size of the list is pre determined.|The max size of the list can be determined during run time.|
 
 >Deterministic and non-deterministic algorithm
 

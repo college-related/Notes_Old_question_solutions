@@ -40,7 +40,7 @@ Syntax:
 |-------------|------------|
 |It provides full abstraction.|It doesnot provides full abstraction.|
 |`interface` keyword is used to define it.|`abstract` keyword is used to define it..|
-
+|||
 
 ## 2a,
 
