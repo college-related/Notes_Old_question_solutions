@@ -30,7 +30,7 @@
 - **Protected**: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
 
 
-[Example](https://github.com/Alson33/All_Code_Subject_Notes/tree/master/3rd-Semester/JAVA/Old_Questions/2018-spring/scope-modifier-solution)
+[Scope Modifier Example](https://github.com/Alson33/All_Code_Subject_Notes/tree/master/3rd-Semester/JAVA/Old_Questions/2018-spring/scope-modifier-solution)
 
 ##  2a,
 
@@ -47,7 +47,7 @@
 	-  `Private method` cannot be inherited, hence trying to override a private method only creates a new private method for the child class.
 - **Though static and private methods can be overloaded** 
 
-[Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/PrivateStatic.java)
+[Overriding private and static method](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/PrivateStatic.java)
 
 ## 2b,
 
@@ -81,7 +81,7 @@
 			}
 		}
 - Now we can use the *ClassNameException* Exception class where ever we need it.
-[Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/CustomException.java)
+[Custom Exception Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/CustomException.java)
 
 ## 3b,
 
@@ -93,11 +93,11 @@
 |They don't need a main method to start the program.|They need a main method to start the program.|
 |They need HTML file as they run on browser.|They don't need a HTML file.|
 
-[Create Applet program](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/AudioDemo.java)
+[Create Applet program to play audio file](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/AudioDemo.java)
 
 ##  4a,
 
-[Create swing GUI](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/UpperCaseDemo.java)
+[Create swing GUI that have a textfield and a button which when clicked changes the text inside the texfield into uppercase and changes background color.](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/UpperCaseDemo.java)
 
 ## 4b,
 
@@ -108,7 +108,7 @@
 - `fillRect(starting x, starting y, ending x, ending y);` **to draw a Rectangle filled with selected color.**
 - `fillOval(starting x, starting y, width, height);` **to draw a Oval filled with selected color.**
 
-[Display image Example]()
+[Display image Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/ImageDemo.java)
 
 ##  5a,
 
@@ -141,7 +141,7 @@
 
 >Getting list of IP Address 
 
-[Example]()
+[Solution](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/GetIpAddress.java)
 
 ##  6a,
 
@@ -160,11 +160,11 @@
 
 >Setting up JDBC database connection pool
 
-[Connection pool]()
+[Connection pool](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/ConnectionPoolDemo.java)
 
 ## 6b,
 
-[WAP to update]()
+[WAP to update the database](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/UpdateDemo.java)
 
 ## 7,
 
