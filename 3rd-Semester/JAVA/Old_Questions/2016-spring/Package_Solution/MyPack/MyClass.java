@@ -1,4 +1,4 @@
-package MyPack;
+package Package_Solution.MyPack;
 
 public class MyClass {
     public void mssg(){

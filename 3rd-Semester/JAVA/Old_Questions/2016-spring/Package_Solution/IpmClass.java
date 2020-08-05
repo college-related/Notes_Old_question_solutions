@@ -1,8 +1,10 @@
-import MyPack.Myclass;
+package Package_Solution;
+
+import Package_Solution.MyPack.MyClass;
 
 class IpmClass {
     public static void main(String[] args) {
-        Myclass obj = new Myclass();
+        MyClass obj = new MyClass();
 
             obj.mssg();
     }
