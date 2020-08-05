@@ -1,7 +1,9 @@
 import java.io.*;
 
 class CustomException extends Exception {
-	CustomException(String message){
+	private static final long serialVersionUID = 1L;
+
+	CustomException(String message) {
 		super(message);
 	}
 }
