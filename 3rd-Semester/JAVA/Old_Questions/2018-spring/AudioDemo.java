@@ -3,7 +3,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class AudioDemo extends Applet implements ActionListener {
-   Button play,stop;
+   
+   private static final long serialVersionUID = 1L;
+   Button play, stop;
    AudioClip audioClip;
    
    public void init() {
