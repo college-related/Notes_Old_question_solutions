@@ -16,14 +16,18 @@ class Student {
         try {
             
             FileWriter fw = new FileWriter("student.dat");
-            fw.write(
-                name
-                roll
-            );
+            fw.write("Name: "+ name + "\nRoll: " + roll);
 
             fw.close();
 
             FileReader fr = new FileReader("student.dat");
+
+            int i;
+
+                while((i=fr.read()) != -1)
+                    System.out.print((char)i);
+            
+            fr.close();
 
         } catch (Exception e) {
             System.out.println(e);
