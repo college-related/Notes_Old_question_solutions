@@ -38,13 +38,15 @@ Syntax:
 
 |**Interface**|**Abstract**|
 |-------------|------------|
-|It provides full abstraction.|It doesnot provides full abstraction.|
-|`interface` keyword is used to define it.|`abstract` keyword is used to define it..|
-|||
+|It is a special type of class that doesnot have any data members and have only abstract methods.|It is a special type of class that does not have any data members but can have abstract methods and normal methods.|
+|`interface` keyword is used to define it.|`abstract` keyword is used to define it.|
+|Multiple inheritance is supported.|Multiple inhheritance is not supported.|
+|It provides full absrtaction.|It provides some extend of abstraction.|
+|It cannot have any normal methods.|It can have normal methods.|
 
 ## 2a,
 
-[Solution]()
+[Interface Solution]()
 
 ## 2b,
 
@@ -60,7 +62,7 @@ Syntax:
 
 ## 3a,
 
-[Solution]()
+[Solution]() // TODO
 
 
 ## 3b,
@@ -90,11 +92,11 @@ Syntax:
 
 ## 4b,
 
-[Explanation with Example]()
+[Explanation with Example]() // TODO
 
 ## 5a,
 
-[Solution]()
+[Menubar solution]()
 
 ## 5b,
 
@@ -116,20 +118,24 @@ Syntax:
 
 ## 6a,
 
-[Solution]()
+[Closable Frame]()
 
 ## 6b,
 
-[Solution]()
+[Cirlce inside rectangle with text in times new roman]()
 
 ## 7,
 
 >Static member variable
 
 - Static member variable are a kind of variable that has only one refrence for all the objects of the class.
+- It is a classess variable, i.e it is same for all the objects of that class.
 - `static` keyword is used to create a static member variable.
-- 
+- If one object of the class changes the value of the static member then when displying value of that variable with another object will show the changed value.
 
 >Swing
 
-- Swing is a GUI toolkit
+- Swing is a GUI toolkit for java window based application.
+- It is built on top of `AWT` API.
+- It provides components that are lightweight and platform independent unlike `AWT`.
+- We use `Javax.swing` package in order to use swing components.
