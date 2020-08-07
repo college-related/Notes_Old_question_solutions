@@ -19,7 +19,7 @@ public class ReadDBDemo {
             while(rs.next()){
                 System.out.println("ID: "+ rs.getInt(1));
                 System.out.println("Name: "+ rs.getString(2));
-                System.out.println("Post: "+ rs.getString(3);
+                System.out.println("Post: "+ rs.getString(3)); // for 2015-Fall question comment this out
             }
     }
 
