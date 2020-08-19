@@ -249,22 +249,59 @@
 
 >Collision in hashing
 
+- Hashing is the process of making tables or list of data using hash functions that converts the given key to smaller number and use the small number as index in the table.
+- Hashing may cause in having two or more datas in the table point to the same key or memory address,
+- Hence the situation where a newly inserted data maps to an already occupied slot in the table is called `Collision in hashing`.
+
 >Collision resolving technique in hashing
 
->Separate chaining
+- Inorder to handle Collision in hashing we can use some technique, they are:-
+
+>Separate chaining(Open hashing)
+
+- Separate chaining is the Collision resolving technique where the cell of the table where collision occurs to point to a linked list.
+- It is mostly used when the number of keys to map to be inserted or deleted in the table is unknown.
+- Advantages:-
+	- It is simple to implement
+	- Hash table never fills up
+- Disadvantage:-
+	- If chain becomes long, then search time becomes more.
+	- Uses extra space for links
+
+>Open addressing(Closed hashing)
+
+- Open addressing is the collison handling technique in which all the elements are stored in the hash table of itself.
+- It is used when the number of datas to be inserted or deleted is known.
+- There are 3 methods of Open addressing:-
+	- Linear probing
+		- It is the method in which probing (Searching for next empty slot) is linear.
+		- Clustering occurs while using this method as more collision occurs.
+	- Quadratic probing
+		- It is the method in which probing is quadratic.
+		- It works in i2 in i’th iteration.
+	- Double hashing
+		- It is the method in which a second hashing function is done for the same key.
+		- Clustering is not encountered but time for 2 hashing functions is more.
+
 
 ##  6a,
 
 >Graph and Digraphs
 
 - A Graph is a set of nodes(or vertices) and a set of arcs(or edges). Each arc in a graph is specified by a pair of nodes.
-
 - The graph is said to be Digraphs(Directed graphs) if the pairs of nodes(vertices) that makes up the arcs (edges) are ordered pairs.
 
 >Adjacency matrix representation of graph
 
 - A adjacency matrix is a square matrix used to represent a finite graph.
-- 
+- It specifies the number of direct paths a vertex have with other vertex.
+- For undirected:-
+
+![Example of Adjacency matrix for undirected graph]()
+
+- For Directed graph:-
+
+![Example of Adjacency matrix for directed graph]()
 
 ## 6b,
 
