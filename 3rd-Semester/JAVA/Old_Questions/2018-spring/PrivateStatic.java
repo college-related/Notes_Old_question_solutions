@@ -3,7 +3,7 @@ class One {
         System.out.println("This is a private method.");
     }
 
-    static void show(){
+    public static void show(){
         System.out.println("This is a static method.");
     }
 }
@@ -14,15 +14,14 @@ class PrivateStatic extends One {
         System.out.println("Trying to override private method.");
     }
 
-    static void show(){
+    public static void show(){
         System.out.println("Trying to override static method.");
     }
 
     public static void main(String[] args) {
-        PrivateStatic obj = new PrivateStatic();
+        One obj = new PrivateStatic();
 
-            obj.mssg();//prints Trying to override private method.
-            // it seeems as mssg() method is overridden but actually it is a new method for PrivateStatic class
+            obj.mssg();//throws an error as the method is private and cannot be accessed from derived class.
 
             obj.show();//prints This is a static method.
     }
