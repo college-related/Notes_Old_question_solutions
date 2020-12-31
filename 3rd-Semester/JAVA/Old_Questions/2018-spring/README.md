@@ -2,13 +2,11 @@
 
 [1a](#1a) | [1b](#1b) | [2a](#2a) | [2b](#2b) | [3a](#3a) | [3b](#3b) | [41](#41) | [4b](#4b) | [5a](#5a) | [5b](#5b) | [6a](#6a) | [6b](#6b) | [7](#7)
 
-##  1a,
-
->Architectural-neutral
+##  1a, Architectural-neutral
 
 - Architectural-neutral defines as something that is independent of different platforms, like codes that can run in any OS(Operating System). Java is a Architectural-neutral Language because of the JVM which is in it self Architectural dependent but makes the java files Architectural-neutral.
 
->Wrapper class
+### Wrapper class
 
 - They are the classes that provides a way to use primitive data types(int, boolean, etc ..) as objects.
 - some of the wrapper classes are:-
@@ -20,9 +18,7 @@
 |boolean|Boolean|
 
 
-##  1b,
-
->Scope of modifiers
+##  1b, Scope of modifiers
 
 - **Public:** The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
 - **Private**: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
@@ -32,60 +28,59 @@
 
 [Scope Modifier Example](https://github.com/Alson33/All_Code_Subject_Notes/tree/master/3rd-Semester/JAVA/Old_Questions/2018-spring/scope-modifier-solution)
 
-##  2a,
-
->Method overloading
+##  2a, Method overloading
 
 - Method overloading is a way of gaining polymorphism in java where a method with same name can have different functionality.
 - It can be done by adding extra arguments or having different types of argument. 
 
->Can we override private or static method?
+### Can we override private or static method?
 
 - No, we cannot override a private or static method.
 - This is because;- 
 	- `Static method` are bonded during compile time and the reference to that method is only one made by the compiler, hence overridding only hides the new static method and calls the compiled one.
-	-  `Private method` cannot be inherited, hence trying to override a private method only creates a new private method for the child class.
+	-  `Private method` cannot be inherited, hence trying to override a private method throws an compile time exception.
 - **Though static and private methods can be overloaded** 
 
 [Overriding private and static method](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/PrivateStatic.java)
 
-## 2b,
-
->Difference between interface and abstract class
+## 2b, Difference between interface and abstract class
 
 [2011-fall/answer](https://github.com/Alson33/All_Code_Subject_Notes/tree/master/3rd-Semester/JAVA/Old_Questions/2011-fall#1b)
 
-##  3a,
-
->FileReader class
+##  3a, FileReader class
 
 -  File Reader Class is a class used to read characters data or text data.
 -   Here, we can read character by character by character; not line by line.
 
->BufferedWriter class
+### BufferedWriter class
 
 -   BufferedWriter is almost similar to FileWriter but it uses internal buffer to write data info file. So, if the number of write operation are more, the actual IO operations are less and performance is better.
 -   You should use BufferedWriter when no. of write operations are more.
 
->Creating own execption subclasses
+### Creating own execption subclasses
 
 - **Step 1:** Make a class with Exception at the end and make it extend a Exception class.
 	
-		Example: public class ClassNameException extends Exception {}
+```java
+Example: 
+public class ClassNameException extends Exception {}
+```
+
 - **Step 2:** Make a constructor of the class with a `String` argument and call super constructor inside it passing the argument.
 
-		Example: 
-		public class ClassNameException extends Exception {
-			ClassNameException(String mssg){
-				super(mssg); 
-			}
-		}
+```java
+Example: 
+public class ClassNameException extends Exception {
+	ClassNameException(String mssg){
+		super(mssg); 
+	}
+}
+```
+
 - Now we can use the *ClassNameException* Exception class where ever we need it.
 [Custom Exception Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/CustomException.java)
 
-## 3b,
-
->Difference Between applet and normal java program
+## 3b, Difference Between applet and normal java program
 
 |**Applet**|**Java Program**|
 |-----|---|
@@ -99,9 +94,7 @@
 
 [Create swing GUI that have a textfield and a button which when clicked changes the text inside the texfield into uppercase and changes background color.](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/UpperCaseDemo.java)
 
-## 4b,
-
->Different methods of drawing
+## 4b, Different methods of drawing
 
 - `drawLine(starting x, starting y, ending x, ending y);` **to draw a line.**
 - `drawRect(starting x, starting y, ending x, ending y);` **to draw a Rectangle.**
@@ -110,9 +103,7 @@
 
 [Display image Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/ImageDemo.java)
 
-##  5a,
-
->Difference Between TCP and UDP
+##  5a, Difference Between TCP and UDP
 
 |**TCP**|**UDP**|
 |---|---|
@@ -124,7 +115,7 @@
 |It is used by HTTP, FTP, etc.|It is used by DNS, TFTP, etc.|
 |TCP has a (20-80) bytes variable length.|UDP has a 8 byte fixed length header.|
 
->InetAddress class
+### InetAddress class
 
 - It represents an IP address. It can convert domain name to IP address and also it can perform DNS lookup.
 - Some methods of *InetAddress class* are: 
@@ -132,33 +123,29 @@
 	- `public String getHostNameAddress();`
 	- `String toString();`
 
-## 5b,
-
->Key classes to work with datagrams
+## 5b, Key classes to work with datagrams
 
 - `DatagramSocket class`:  This class is used for sending and receiving datagram packets.
 - `DatagramPacket class`: This class helps in defining a message for sending and receiving during datagram communication.
 
->Getting list of IP Address 
+### Getting list of IP Address 
 
 [Solution](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/GetIpAddress.java)
 
-##  6a,
-
->Benefits of using prepared Statement
+##  6a, Benefits of using prepared Statement
 
 -   Easy to insert parameters into the SQL statement.
 -   Easy to reuse the  `PreparedStatement`  with new parameter values.
 -   May increase performance of executed statements.
 -   Enables easier batch updates.
 
->JDBC database connection pool 
+### JDBC database connection pool 
 
 - Connection pooling means that connections are reused rather than created each time a connection is requested.
 - It helps to improve the performance of the program.
 - In JDBC a memory chace of database connections called connection pool is maintained by a conncetion pooling module as a layer on top of any standard JDBC driver product.
 
->Setting up JDBC database connection pool
+### Setting up JDBC database connection pool
 
 [Connection pool](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/ConnectionPoolDemo.java)
 
@@ -168,13 +155,13 @@
 
 ## 7,
 
->a, Inner Class
+### a, Inner Class
 
 - A inner class or nested class is a class which is declared inside a class or interface.
 - We use it to logically group classes and interfaces in one place so that it can be more readable and maintainable.
 - **It can also access all the members of its outer class including private data members and methods.**
 
->c, Types of JDBC drivers
+### c, Types of JDBC drivers
 
 - **Type 1:** JDBC-ODBC driver.
 	- In this type of driver, a JDBC bridge is used to access ODBC drivers installed on each client machine.
