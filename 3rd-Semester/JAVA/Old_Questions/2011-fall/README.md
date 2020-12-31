@@ -2,23 +2,19 @@
 
 [1a](#1a) | [1b](#1b) | [2a](#2a) | [2b](#2b) | [3a](#3a) | [3b](#3b) | [41](#41) | [4b](#4b) | [5a](#5a) | [5b](#5b) | [6a](#6a) | [6b](#6b) | [7](#7)
 
-## 1a,
-
->JVM is used for:- 
+## 1a, JVM is used for:- 
 
 - JVM (Java Virtual Machine) is a interpreter that converts the Byte Code into machine-readble code.
 - It is used to run the java files in the OS(Operating System).
 - Whenever we install JDK, the corresponding JVM is installed making java a platform independent language.
 
->JRE :-
+### JRE :-
 
 - JRE (Java Runtime Environment) is a software used to run Java system inside a OS.
 - It consists of Java class libraries, JVM, Java class loader.
 - It is a example of `abstraction`, abstracting the underlying OS into a consistent platform for running JAva applications.
 
-## 1b,
-
->Uses of package:-
+## 1b, Uses of package:-
 
 - Package in Java are constraints for classes.
 - It allows to create a class named ABC(for example), which you can stire in one package and have a class named ABC in another package without worring about colliding.
@@ -26,15 +22,19 @@
 
 Syntax:
 
-    package package_name; {where package_name is the folder name usually}
+```java
+package package_name; // where package_name is the folder name usually
+```
 
 - To use a class from a package use import command in the required file.
 
 Syntax:
 
-    import packge_name.ClassName;
+```java
+import packge_name.ClassName;
+```
 
->Difference between interface and abstract classes:-
+### Difference between interface and abstract classes:-
 
 |**Interface**|**Abstract**|
 |-------------|------------|
@@ -48,9 +48,7 @@ Syntax:
 
 [Interface Solution]()
 
-## 2b,
-
->Reflection API
+## 2b, Reflection API
 
 - Reflection API is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.
 - Uses of Reflection API are:-
@@ -65,16 +63,14 @@ Syntax:
 [Solution]() // TODO
 
 
-## 3b,
-
->Security restrictions of applet:-
+## 3b, Security restrictions of applet:-
 
 - An applet cannot load libraries or define native methods.
 - An applet cannot ordinarily read or write files on the execution host.
 - An applet cannot read certain system properties.
 - An applet cannot make network connections except to the host that it come from.
 
->Attributes of applet tag are:-
+### Attributes of applet tag are:-
 
 - **CODEBASE:** It is an optional attribute that specifies the bse URL of the applet code.
 - **CODE:** It is a required attribute that gives the file name that contains the compiled file(.class file).
@@ -98,13 +94,11 @@ Syntax:
 
 [Menubar solution]()
 
-## 5b,
-
->Multicasting
+## 5b, Multicasting
 
 - Multicasting is a model that allows the same event listener to be reacted by several event sources and vice versa.
 
->Layout Manager classes (explain any two)
+### Layout Manager classes (explain any two)
 
 - FlowLayout
     - Arranges components like words on a page - From left to right in rows and then top to bottom as each row fills up.
@@ -124,16 +118,14 @@ Syntax:
 
 [Cirlce inside rectangle with text in times new roman]()
 
-## 7,
-
->Static member variable
+## 7, Static member variable
 
 - Static member variable are a kind of variable that has only one refrence for all the objects of the class.
 - It is a classess variable, i.e it is same for all the objects of that class.
 - `static` keyword is used to create a static member variable.
 - If one object of the class changes the value of the static member then when displying value of that variable with another object will show the changed value.
 
->Swing
+### Swing
 
 - Swing is a GUI toolkit for java window based application.
 - It is built on top of `AWT` API.
