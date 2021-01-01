@@ -58,7 +58,12 @@
 
 |Memory address|label|mnemonics|Hexcode|Comment|
 |--|--|--|--|--|
-|0000H||
+|0000H||MVI C, 01H|Hexcode of MVI C|C <-- 1|
+|0001H||-------|01H||
+|0002H|LOOP|MOV A, C|Hexcode of MOV A,C|A <-- (c)|
+|0003H||ADD C|Hexcode of ADD C|A <-- (A+C)|
+|0004H||STA 2040H|
+// **Incomplete not correct
 
 ## 3a, Indentify the size, addressing mode, T-states and function of the following instructions.
 
@@ -91,15 +96,13 @@
 ```js
 //Syntax:
 
-ADDITION  MACRO [num1, num2]
-            MOV AX, num1
-            MOV BX, num2
-            ADD AX, BX
-          ENDM
+macro_name  MACRO [...]
+              ....
+            ENDM
 ```
 
-- In the above example **ADDITION** is the `macro name`, **MACRO and ENDM** are the `assembler directives`, inside them are the `instructions` to be used and inside **brackets** are the `list of parameters`.
-- Now we can use the **ADDITION** instead of writing all the instructions again whenever they are needed in the program.
+- In the above syntax **macro_name** is the `macro name`, **MACRO and ENDM** are the `assembler directives`, inside them are the `instructions` to be used and inside **brackets** are the `list of parameters`.
+- Now we can use the **macro_name** instead of writing all the instructions again whenever they are needed in the program.
 
 ```js
 //Example:
@@ -131,13 +134,27 @@ TITLE "Sum of two numbers"
 .stack 100h
 
 .code
-start:
-
+start
+    MOV ah, 1 ;ask for input
+    int 21h ;interrupts all action until pervious command executed
+    MOV bl, al ;move the first input to bl
+    MOV ah, 1 ;ask another input
+    int 21h
+    ADD bl, al ;adds the ascii codes of the input number
+    SUB bl, 48 ;subtract 48 to get the real ascii code
+    MOV dl, bl ;move the result to dl REG as display of data is done from dl REG
+    MOV ah, 2 ;command to display
+    int 21h
+    MOV ah, 4ch ;gets out of the display command
+    int 21h
+end start
 end
 
 ```
 
 ## 4b, Desing an address decoding circuit to interface an input device with eight input switches and eight LEDs output device at address 50H and 51H respectively.
+
+// TODO
 
 ## 5a, Explain interrupt processing in details. Describe methods of handling multiple interrupts.
 
@@ -180,7 +197,21 @@ end
 
 _**Figure: Pin configuration of 8237 controller**_
 
-- //TODO: modes available in 8237 controller
+- The modes of a 8237 controller are divided into two cycles:-
+
+    1. **Idle cycle**
+        - When no channel is requesting service, the 8237 will enter in idle cycle. In this cycle, the 8237 sample DREQ lines every clock cycle to determine if any channel is requesting DMA service.
+    1. **Active cycle**
+        - When the 8237 is in the idle cycle and channel request DMA service, the device will output an HRQ to the microprocessor and enter into the active cycle. In this mode the DMA trasnfer occurs in one of the four modes:-
+            
+            1. **Single Transfer Mode** 
+                - In this mode the device is programmed to make one transfer only, the word count will be decremented and the address decremented or incremented following each transfer.
+            1. **Block Transfer Mode**
+                - In this mode the device is activated by DREQ to continue making transfer during the service until Terminal Count(TC) caused by word count going to zero or an external End Of Process (~EOP) is encountered.
+            1. **Demand Transfer Mode**
+                - In this mode the device is programmed to continue making transfer until a TC or external ~EOP is encountered or until DREQ line goes inactive.
+            1. **Cascade Transfer Mode**
+                - This mode is used to cascade more than one 8237 together for simple system exapnsion. The HRQ and HLDA signals from additional 8237 are connected to the DREQ and DACK signal of a channel of the initial 8237
 
 ## 6b, Draw labelled diagram of 8254 PIT controller.
 
@@ -190,7 +221,37 @@ _**Figure: 8254 PIT Controller**_
 
 ### Instruction to generate 5KHz square wave for 8254 PIT.
 
-- //TODO
+```
+Given:
+    Mode of operation  = Mode 3(Square wave generator)
+    Frequency of square wave = 5 KHz
+
+Assume:
+    Frequency of Clock be 5 MHz
+    Counter = counter 1
+
+    Address of counter 0 = 80H
+    Address of counter 1 = 81H
+
+then
+               Frequency of Clock
+    Count = ------------------------
+            Frequency of square wave
+            5 MHz    5000 KHz
+          = -----  = --------
+            5 KHz     5 KHz
+                   = 1000
+    Control word = |Sc1|Sc0|RW1|RW0|M2|M1|M0|BCD/Binary|
+                 = |0|1|1|1|0|1|1|1|
+                 // Sc1=0,Sc1=1 as we used counter 1
+                 // RW1=1,RW2=1 as we have to read or write lower byte folllowed by upper byte
+                 //M2=0,M1=1,M0=1 as we have Mode 3
+                 //last bit=1 as the result will be in BCD
+                = 77H
+Subroutine program:
+    MVI A, 77H
+    // TODO remaining
+```
 
 ## 7,
 
@@ -200,8 +261,32 @@ _**Figure: 8254 PIT Controller**_
 
 ### b, One pass and Two pass assemblers
 
-- //TODO
+- A **One pass assembler** is the type of assembler that passes through the program only once to assemble the
+program. This type of assembler collects the labels, resolves future reference and does the actual assembling
+process in a single pass or check.
+    - It doesnot create any intermediate code, instead is directly generates the target code or the machine executable code.
+    - It might face problems when referencing labels that have future reference so it needs a extra table to store the incomplete instruction in a table called `Table of Incomplete instruction(TII)`.
+- A **Two Pass assembler** is the type of assembler that passes through the program exactly twice to assemble the program. This type of assembler collects the labels and assigned address in first pass then runs throughs the source file again to assemble instructions in the second pass.
+    - It generates a intermediate code in its first pass referencing all the labels and constants in the process which is runned again in second pass to create the target or executable code.
 
 ### c, ALP Development tools
 
-- //TODO
+- ALP Development tools are the tools needed to create and run an assembly language programs. The ALP development tools are as follows:-
+
+    1. **EDITOR**
+        - An editor is a program which allows you to create a file containing the assembly language statements for your program.
+        - Example: PC-Write, Wordstar.
+    1. **ASSEMBLER**
+        - An assembler program is used to translate the assembly language mnemonics for instructions to corresponding binary codes. When you run the assembler, it reads the source file of your program from the disk where you have saved it after editing.
+    1. **LINKER**
+        - A linker is a program used to join several object files into one large object file.
+        - The linker produces a link file which contains the binary codes for all the combined modules. The linker also produces a link map file which contains the address information about the linked files (.exe)
+    1. **LOCATOR**
+        - A locator is a program used to assign the specific address of where the segments of object code are to be loaded into memory.
+    1. **DEBUGGER**
+        - A debugger is a program which allows you to load your object code program into system memory, execute the program and troubleshoot or debug it.
+        - It allows you to change the contents of registers and memory locations and re-run the program.
+        - And allows to set breakpoints.
+    1. **EMULATOR**
+        - An emulator is a mixture of hardware and software.
+        - It is used to test and debug the hardware and software of an external system, such as the prototype of a microprocessor based instrument.
