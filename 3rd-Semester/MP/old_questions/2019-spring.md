@@ -28,7 +28,7 @@
 
 ### Timing diagram for MVI M, 20H
 
-[Same as 2012 2a]()
+[Similar as 2012 2a]()
 
 ## 2a, Describe the instruction set of 8085 microprocessor on basis of its operation.
 
@@ -58,12 +58,20 @@
 
 |Memory address|label|mnemonics|Hexcode|Comment|
 |--|--|--|--|--|
-|0000H||MVI C, 01H|Hexcode of MVI C|C <-- 1|
-|0001H||-------|01H||
+|0000H||MVI C, 0AH|Hexcode of MVI C|C <-- 10|
+|0001H||-------|0AH||
 |0002H|LOOP|MOV A, C|Hexcode of MOV A,C|A <-- (c)|
 |0003H||ADD C|Hexcode of ADD C|A <-- (A+C)|
-|0004H||STA 2040H|
-// **Incomplete not correct
+|0004H||DCR C|Hexcode of DCR C|C <-- (C-1)|
+|0005H||JNZ LOOP|Hexcode of JNZ|Jumps to LOOP if result c not equal to 0|
+|0006H||-----|02H||
+|0007H||-----|00H||
+|0008H||STA 2040H|Hexcode of STA|2040H <--- (A)|
+|0009H||-----|40H||
+|000AH||-----|20H||
+|000BH||HTL|CFH||
+
+### _**`not correct`**_
 
 ## 3a, Indentify the size, addressing mode, T-states and function of the following instructions.
 
@@ -118,10 +126,8 @@ ADDITION  MACRO [num1, num2] // macro defining
 .stack 100h
 
 .code // start of codes
-start: // start of the instructions
     ADDITION [21xH, 20xH] // adding 21xH and 20xH
     MOV CX, AX // moving content of AX to CX 
-end start // physical end
 end // logical end
 ```
 
@@ -134,7 +140,6 @@ TITLE "Sum of two numbers"
 .stack 100h
 
 .code
-start
     MOV ah, 1 ;ask for input
     int 21h ;interrupts all action until pervious command executed
     MOV bl, al ;move the first input to bl
@@ -147,7 +152,6 @@ start
     int 21h
     MOV ah, 4ch ;gets out of the display command
     int 21h
-end start
 end
 
 ```
