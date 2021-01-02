@@ -26,10 +26,10 @@
 
             Probability male wear glasses = P(W) = P(A).P(W/A) + P(B).P(W/B) + P(C).P(W/C) + P(D).P(W/D) = 0.38
 
-            Probability male wearing glasses is of age 1-16 = P(A/W) = P(A).P(W/A) / P(W) = 
-            Probability male wearing glasses is of age 17-24 = P(B/W) = P(B).P(W/B) / P(W) = 
-            Probability male wearing glasses is of age 24-64 = P(C/W) = P(C).P(W/C) / P(W) = 
-            Probability male wearing glasses is of age 64-Over = P(D/W) = P(D).P(W/D) / P(W) = 
+            Probability male wearing glasses is of age 1-16 = P(A/W) = P(A).P(W/A) / P(W) = 1.131
+            Probability male wearing glasses is of age 17-24 = P(B/W) = P(B).P(W/B) / P(W) = 0.0368
+            Probability male wearing glasses is of age 24-64 = P(C/W) = P(C).P(W/C) / P(W) = 0.453
+            Probability male wearing glasses is of age 64-Over = P(D/W) = P(D).P(W/D) / P(W) = 0.379
 
 ## 2a,
 
@@ -58,3 +58,9 @@
 >Probability x lies between 6o minutes and 100 minutes
 
 [Solution](https://pqtsolutions.alsongarbuja.repl.co/2003-Fall/question3b.html)
+
+## 4a,
+
+
+## 4b,
+
