@@ -20,7 +20,9 @@
 
 ## 2a,
 
->Information hiding
+>Information hiding / Data hiding
+
+- Data or information hiding is the process of 
 
 >Access modes available
 

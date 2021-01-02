@@ -10,9 +10,27 @@
 
 >OOP VS POP(Sturctural programming)
 
+|**OOP**|**POP**|
+|--|--|
+|||
+|||
+|||
+
 ## 2a,
 
 >Friend function
+
+- A friend function is a type of function in C++, that has the access to the private members of the class that it is a friend function of.
+
+>Its Advantage
+
+- 
+
+>Its Disadvantage
+
+- 
+
+[Example friend function]()
 
 ## 2b,
 

@@ -42,6 +42,15 @@
 
 >Dynamic memory allocation
 
+- Dynamic memory allocation is the process of allocating memory space of a sturcture in the storage during the runtime.
+- In simple words the size of the sturcture(like array) is determined during the runtime.
+- It is used when we don't know the size of the structure we are working with before hand. For instance:- if we have to record data about students of a school every year we won't know the size of new students, so we might allocate memory dynnamically.
+
+>How we achieve it in C++
+
+- In C++ we allocate memory dynamically by using the `new` operator.
+- *Syntax:* `new data-type;`
+
 [Example]()
 
 ## 4a,

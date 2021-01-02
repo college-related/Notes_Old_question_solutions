@@ -4,6 +4,9 @@
 
 >Define abstraction
 
+- Abstraction is the process of hiding the implemetation of the of the program from the user and only exposing the interface and operations the users can perform.
+- It is obtained in C++ by using the `abstract class` and `access modifiers`.
+
 >Main features of OOP
 
 ## 1b,
@@ -37,7 +40,15 @@
 
 >Inheritance
 
+- Inheritance is the feature of OOP langauge that allows to inherit data members(i.e variable and functions) of a class to another class.
+- It is same as inheriting genes of parents by the child. The inherited class is called base or parent class, the inheriting class is called sub or child class.
+
 >Advantage of Inheritance
+
+- It makes the code reusable.
+- It reduces the duplication of data members inside classes.
+- We can create template classes using abstract class and inherit them when needed.
+- Data hiding or abstraction can be gained using inheritance.
 
 >Disadvantage of Inheritance
 
