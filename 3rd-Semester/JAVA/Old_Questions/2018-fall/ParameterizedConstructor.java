@@ -3,7 +3,7 @@ class Employee {
 	String name, post;
 	float salary;
 
-	Two(int id, String name, String post, float salary){
+	Employee(int id, String name, String post, float salary){
 		this.id = id;
         	this.name = name;
         	this.post = post;
