@@ -7,17 +7,20 @@
 - JVM (Java Virtual Machine) is a interpreter that converts the Byte Code into machine-readble code.
 - It is used to run the java files in the OS(Operating System).
 - Whenever we install JDK, the corresponding JVM is installed making java a platform independent language.
+- As we know java has a feature write onces which means we have to write the java code only once and it will run on any platform, any OS. It is possible because of the JVM.
+- By downloading the corresponding JVM it will automatically convert the byte code to the platform specific machine readable code, hence having to write the actual java code only once.
 
 ### JRE :-
 
 - JRE (Java Runtime Environment) is a software used to run Java system inside a OS.
 - It consists of Java class libraries, JVM, Java class loader.
-- It is a example of `abstraction`, abstracting the underlying OS into a consistent platform for running JAva applications.
+- It is a example of `abstraction`, abstracting the underlying OS into a consistent platform for running Java applications.
 
 ## 1b, Uses of package:-
 
 - Package in Java are constraints for classes.
-- It allows to create a class named ABC(for example), which you can stire in one package and have a class named ABC in another package without worring about colliding.
+- It allows to create a class named ABC(for example), which you can store in one package and have a class named ABC in another package without worring about colliding.
+- It also makes the project structure clean and managable as we can group classes that have comman properties in a package while also using them in other packages.
 - To make a package use the package command as the first statement in the java file.
 
 Syntax:
@@ -124,10 +127,13 @@ import packge_name.ClassName;
 - It is a classess variable, i.e it is same for all the objects of that class.
 - `static` keyword is used to create a static member variable.
 - If one object of the class changes the value of the static member then when displying value of that variable with another object will show the changed value.
+- If a class have only static methods then the class can be used directly without creating any object of that class to access those methods. Example: `In Collection.sort(list), Collection class have all static methods only one of which is sort() so we don't have to make a object of Collection class to access the sort() method`
 
 ### Swing
 
 - Swing is a GUI toolkit for java window based application.
 - It is built on top of `AWT` API.
 - It provides components that are lightweight and platform independent unlike `AWT`.
+- It has much more components then AWT and have richer functionalities.
 - We use `Javax.swing` package in order to use swing components.
+- It is much like AWT and can use the AWT components with a J infront of the Classes. Example: `JFrame, JButton, etc`

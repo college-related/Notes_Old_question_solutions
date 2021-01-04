@@ -24,9 +24,10 @@
 
 ## 3b, User defined package
 
-- A `package` is a pack or group f classes, interfaces and other packages.
+- A `package` is a pack or group of classes, interfaces and other packages.
+- It is a constraint for classes.
 - User defined package are those package which are defined by users/programmers.
-- We can make a user defined package by using `package` keyword at the of the file along with package_name.
+- We can make a user defined package by using `package` keyword at the start of the file along with package_name.
 - And use that package by using `import` keyword along with the package_name.ClassName at the top of needed file.
 
 Example:
@@ -39,7 +40,8 @@ public class ClassName {
 }
 
 //----------------------
-// importing the package, we use MyPack.*; if we want to import all classes in MyPack.
+// importing the package,
+// we use MyPack.*; if we want to import all classes in MyPack.
 
 import MyPack.ClassName;
 
@@ -50,13 +52,9 @@ class DemoClass extends ClassName {
 
 ## 4a,
 
->Applet
+[ applet related question in 2016-Spring#4a]()
 
-[2016-Spring#4a]()
-
->Audio file
-
-[2018-spring]()
+[audio file in 2018-spring]()
 
 ## 4b, Event
 

@@ -5,33 +5,46 @@
 ##  1a, Architectural-neutral
 
 - Architectural-neutral defines as something that is independent of different platforms, like codes that can run in any OS(Operating System). Java is a Architectural-neutral Language because of the JVM which is in it self Architectural dependent but makes the java files Architectural-neutral.
+- Whenever we install JDK, the corresponding JVM is installed making java a platform independent language.
+- As we know java has a feature write onces which means we have to write the java code only once and it will run on any platform, any OS. It is possible because of the JVM.
+- By downloading the corresponding JVM it will automatically convert the byte code to the platform specific machine readable code, hence having to write the actual java code only once.
 
 ### Wrapper class
 
 - They are the classes that provides a way to use primitive data types(int, boolean, etc ..) as objects.
-- some of the wrapper classes are:-
+- They are useful when we want to use primitive data types on collection frameworks(like: ArrayList, LinkedList, etc) which only deals with objects. OR during serialization we need objects not the primitve data types.
+- The process of converting a primitive data type to a wrapper class is called Boxing and vice versa is called unboxing which is automatically done by Java, so we don't need to worry about that much.
+- The wrapper classes are:-
 
 |**Primitive Data Type**|**Wrapper Class**|
 |-------------------|------------|
 |byte|Byte|
 |float|Float|
 |boolean|Boolean|
-
+|long|Long|
+|int|Integer|
+|char|Character|
+|double|Double|
 
 ##  1b, Scope of modifiers
 
-- **Public:** The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
-- **Private**: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
-- **Default**: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
-- **Protected**: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
-
+- Scope modifiers are pre defiened keywords that are used to specify the access level of the class, data member or methods.
+- In java classes have 2 access levels:-
+	- **Default:** Let's you make the class object anywhere inside the package.
+	- **Public:** Let's ypu make the class object anywhere.
+- And data memebers and methods have 4 access levels:-
+	- **Public:** The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+	- **Private**: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+	- **Default**: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+	- **Protected**: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
 
 [Scope Modifier Example](https://github.com/Alson33/All_Code_Subject_Notes/tree/master/3rd-Semester/JAVA/Old_Questions/2018-spring/scope-modifier-solution)
 
 ##  2a, Method overloading
 
 - Method overloading is a way of gaining polymorphism in java where a method with same name can have different functionality.
-- It can be done by adding extra arguments or having different types of argument. 
+- It can be done by adding or removing arguments or having different types of argument.
+- It is also called as compile time polymorphism as the compiler already compiles them and determines which functionality to use when compiling the java file.
 
 ### Can we override private or static method?
 
@@ -51,11 +64,17 @@
 
 -  File Reader Class is a class used to read characters data or text data.
 -   Here, we can read character by character by character; not line by line.
+- We can use the read() method of FileReader class to read the file character by character.
+
+```java
+Syntax:
+	FileReader fr = new FileReader("fileName.txt");
+```
 
 ### BufferedWriter class
 
--   BufferedWriter is almost similar to FileWriter but it uses internal buffer to write data info file. So, if the number of write operation are more, the actual IO operations are less and performance is better.
--   You should use BufferedWriter when no. of write operations are more.
+- BufferedWriter is almost similar to FileWriter but it uses internal buffer to write data info file. So, if the number of write operation are more, the actual IO operations are less and performance is better.
+- We should use BufferedWriter when no. of write operations are more.
 
 ### Creating own execption subclasses
 
@@ -97,9 +116,12 @@ public class ClassNameException extends Exception {
 ## 4b, Different methods of drawing
 
 - `drawLine(starting x, starting y, ending x, ending y);` **to draw a line.**
-- `drawRect(starting x, starting y, ending x, ending y);` **to draw a Rectangle.**
-- `fillRect(starting x, starting y, ending x, ending y);` **to draw a Rectangle filled with selected color.**
-- `fillOval(starting x, starting y, width, height);` **to draw a Oval filled with selected color.**
+- `drawRect(starting x, starting y, width, height);` **to draw a Rectangle.**
+- `fillRect(starting x, starting y, width, height);` **to draw a Rectangle filled with selected color.**
+- `fillOval(starting x, starting y, x-radius, y-radius);` **to draw a Oval filled with selected color.**
+- `drawPolygon(array of x-cor, array of y-cor, number of points in polygon);` **to draw a polygon with some numbers of points**
+- `fillPolygon(array of x-cor, array of y-cor, number of points in polygon);` **to draw and fill a polygon with some numbers of points**
+- `drawString("string", x-cor, y-cor);` **to draw a string at x-cor and y-cor given**
 
 [Display image Example](https://github.com/Alson33/All_Code_Subject_Notes/blob/master/3rd-Semester/JAVA/Old_Questions/2018-spring/ImageDemo.java)
 
