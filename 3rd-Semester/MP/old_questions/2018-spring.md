@@ -2,6 +2,23 @@
 
 ## 1a, Evolution of Intel MP starting from 16-bit architecture to 64-bit architectures.
 
+|Processor|Year|Transistor|Clockspeed|Address Bus|Data Bus|Addressable Memory|
+|--|--|--|--|--|--|--|
+|4004|1971|2300|108KHz|10 bit|4 bit|640 bytes|
+|8008|1972|3500|200KHz|14 bit|8 bit|16 KB|
+|8080|1974|6000|2MHz|16 bit|8 bit|64 KB|
+|8085|1976|6500|5MHz|16 bit|8 bit|64 KB|
+|8086|1978|29000|5MHz|20 bit|16 bit|1 MB|
+|8088|1979|29000|5MHz|20 bit|8 bit|1 MB|
+|80286|1982|134000|8MHz|24 bit|16 bit|16 MB|
+|80386|1985|275000|16MHz|32 bit|32 bit|4 GB|
+|80486|1989|1.2M|25MHz|32 bit|32 bit|4 GB|
+|Pentium|1993|3.1M|60MHz|32 bit|32 bit|4 GB|
+|Pentium Pro|1995|5.5M|150MHz|36 bit|32 bit|64 GB|
+|Pentium II|1997|8.8M|233MHz|36 bit|64 bit|64 GB|
+|Pentium III|1999|9.5M|650MHz|36 bit|64 bit|64 GB|
+|Pentium IV|2000|42M|1.4GHz|36 bit|64 bit|64 GB|
+
 ## 1b,
 
 [Same as 2012-fall 1b part 2]()
@@ -14,17 +31,22 @@ iii, LXI B, 2075H
 
 |Instruction|Size|Addressing mode|Function|Machine Cycles|
 |--|--|--|--|--|
-|LDAX D|
-|ADI 32H|
-|LXI B, 2075H|
+|LDAX D|3-byte|Register indirect addressing mode|It loads the accumulator with the data pointed by D register|1,Opcode fetch<br>2,Memory read<br>3,Memory read<br>4,Memory read|
+|ADI 32H|2-Byte|Immediate addressing mode|It adds the content of accumulator with immediate data 32H|1,Opcode fetch<br>2,Memory Read|
+|LXI B, 2075H|3-Byte|Immediate addressing mode|B register points to 20H data and its pair C register points to the 75H data|1,Opcode fetch<br>2,Memory Read<br>3,Memory Read|
 
 ## 2b, Instruction cycle, machine cycle and T-states.
 
 - **Instruction Cycle**
     - It is a fetch-decode-execute cycle that CPU follows from boot-up to the shut down of the computer in order to process the instrcution provided.
+    - It is also the time required to complete one instrution.
 - **Machine Cycle**
-    - It is the 
+    - It is the time required to complete one operation or subtask of acessing memory, input, output or acknowledging external request.
+    - It may consists of 3 to 6 T-states.
+    - Some machine cycles are:- `Opcode fetch`, `memory read`, `I/O write cycle`, etc 
 - **T-States**
+    - It is the amount of time to perform one sub divison of the operation. It is also known as a unit time. Each machine cycles have to perform a set of task to complete the whole instruction, and each task will take some time to complete which is known as T-state.
+    - Opcode fetch cycle have `4T-states`, Memory write cycle have `3T-states`, etc
 
 ## 2c, Timing diagram of MVI A, 32H
 
@@ -93,11 +115,35 @@ iii, LXI B, 2075H
         - This interrupt is caused by some error conditions produced in the processor internally during the execution of instruction.
         - Example: divide by zero, register overflow,etc
     1. **Hardware Interrupts**
+        - This interrupt is caused by external signal applied to the interrupt pins.
+        - In 8086 microprocessor the external interrupts are in the NMI(NON-Maskable Interrupt) pins.
+        - In 8085 microprocessor the external interrupts are in the INTR(INterrupt Request) pins.
     1. **Software Interrupts**
+        - This interrupt is caused by the available interrupt instructions.
+        - In 8086 INT instruction and INT 21H instruction cause software interrupts.
+        - In 8085 RST 0 - RST 7 instructions causes software interrupts.
 
 - 2nd part in [2019-spring 5b]()
 
 ## 5b, What do you mean by address decoding? Design an address decoding circuit to interface 4K*8 RAM, 8K*8 ROM and 16K*8 RAM with starting address 0000h
+
+- Total number of address lines = 16 (A<sub>15</sub> to A<sub>0</sub>)
+- Size of EPROM = **4kb * 8** = **1kb * 4 * 8** = 2<sup>10</sup> * 2<sup>2</sup> * 8 =  2<sup>12</sup> * 8  
+- number of address lines required for ROM = 12 (A<sub>11</sub> to A<sub>0</sub>)
+- Size of RAM  = **8kb * 8** = **1kb * 8 * 8** = 2<sup>10</sup> * 2<sup>3</sup> * 8 = 2<sup>13</sup> * 8
+- number of address lines required for RAM 2 = 13 (A<sub>12</sub> to A<sub>0</sub>)
+
+`Table for addressing lines`
+
+|Memory|A<sub>15</sub>|A<sub>14</sub>|A<sub>13</sub>|A<sub>12</sub>|A<sub>11</sub>|A<sub>10</sub>|A<sub>9</sub>|A<sub>8</sub>|A<sub>7</sub>|A<sub>6</sub>|A<sub>5</sub>|A<sub>4</sub>|A<sub>3</sub>|A<sub>2</sub>|A<sub>1</sub>|A<sub>0</sub>|Hexadecimal|
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+|EPROM|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0000H|
+||0|0|0|0|1|1|1|1|1|1|1|1|1|1|1|1|0fffH|
+|||||||||||||||||||
+|RAM|0|0|0|1|0|0|0|0|0|0|0|0|0|0|0|0|1000H|
+||0|0|1|0|1|1|1|1|1|1|1|1|1|1|1|1|2fffH|
+
+![Address decoding circuit](../photos/addressDecoding.)
  
 ## 6a, Given MP with clock freqeuncy 10MHz. WAP for 8254 PIT to generate a square wave of frequency 2KHz. 
 
@@ -111,4 +157,19 @@ iii, LXI B, 2075H
 
 ### b, Different types of Assembler
 
+[2019-Spring 7b]()
+
 ### c, 8085 flag register
+
+- Flag register is a register used in microprocessors to store the status of the current operation performed in ALU. Some status are carry status, when the operation have carry.
+- 8085 microprocessor have a 8-bit register for flag in which 3 bits are don't cares and 5-bits are `5 flipflops` used to `set or reset` a flag or status.
+
+|S|Z|x|AC|x|P|x|C|
+|--|--|--|--|--|--|--|--|
+`[Where x = don't cares]`
+
+- **Sign flag(S):** It is set if the result is a negative number.
+- **Zero flag(Z):** It is set if the result of an operation is 0
+- **Auxllary carry flag(AC):** It is set if the 4-bit operation yeilds a carry.
+- **Parity flag(P):** It is set if there is even number of 1's in the result. 
+- **Carry flag(C):** It is set if the operation has a carry.

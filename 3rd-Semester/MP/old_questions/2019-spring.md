@@ -4,11 +4,11 @@
 
 - **Opcode:** 
     - It is a portion of machine langauge   instructions that specifies what operation is to be performed. It is the short form for `Operation code.`
-    - Every instruction in microprocessor have opcode present in them. They can be the code used by the MP to find the operation to be performed or can be the operation itself.
+    - Every instruction in microprocessor have opcode present in them. They are the code used by the MP to find the operation to be performed.
     - _**Example: MOV AL, BL `[MOV is a opcode]`, JMP 2050H `[JMP is the opcode]`, CMA `[CMA is the opcode]`, etc**_
 - **Operand:**
     - It is the other portion of the machine language instruction that holds the data to be operated or the memory address of the data or memory address where the data should be placed.
-    - Unlike Opcode some machine language instructions doesn't have any operands. Depending on the number or size of the operand instruction are divided into categories like `0-bit address instruction`, `1-bit`, `2-bit`, etc.
+    - Unlike Opcode some machine language instructions doesn't have any operands. Depending on the number or size of the operand instruction are divided into categories like `0-byte address instruction`, `1-byte`, `2-byte`, etc.
     - Example ADD B, `[B is the operand]`, LDA 2030H, `[2030H is the operand]`, etc
 
 ### Differentiate between microprocessor and microcontroller.
@@ -47,11 +47,11 @@
         - These instruction affects flag.
         - _**Example: CMP R, CPI 20H, etc**_
     1. **Branching group**
-        - They are the instruction set that are used when the sequence of the program either conditionaly or unconditionaly.
+        - They are the instruction set that are used when the sequence of the program either conditionaly or unconditionaly jumps to another memory locations.
         - They only change the course of the program form one memory address to another memory address that maybe jumping back to older memory address, jumping few memory address or just move to another set of memory address block.
         - _**Example: JMP 1010H, JNC 2050H, etc**_
     1. **Control group**
-        - They are teh instruction set that are used to perform some control operation such as enabling or disabling interrupts, no operation, etc.
+        - They are the instruction set that are used to perform some control operation such as enabling or disabling interrupts, no operation, etc.
         - _**Example: NOP, HTL, etc**_
 
 ## 2b, WAP to find sum of given series 1 + 2<sup>2</sup> + 3<sup>2</sup> + ... + 10<sup>2</sup> Store the result in memory address 2040H and 2041H.
@@ -86,10 +86,10 @@
 |Instruction|Size|Addressing mode|machine cycles|T-states|Function|
 |--|--|--|--|---|--|
 |MVI A,20H|2-byte|Immediate addressing mode|1,Opcode fetch cycle(4T)<br>2,Memory read cycle(3T)|7T|It moves the 20H data to the accumulator|
-|LDA 1234H|3-byte|Memory addressing mode|1,Opcode fetch cycle(4T)<br>2,Memory read cycle(3T)<br>3,Memory read cycle(3T)<br>4,Memory read cycle(3T)|13T|It loads the data at the memory location 1234H to the accumulator|
+|LDA 1234H|3-byte|Direct addressing mode|1,Opcode fetch cycle(4T)<br>2,Memory read cycle(3T)<br>3,Memory read cycle(3T)<br>4,Memory read cycle(3T)|13T|It loads the data at the memory location 1234H to the accumulator|
 |CMP M|1-byte|implied addressing mode|1,Opcode fetch cycle(4T)|4T|It compares the data at the memory location M with the data at the accumulator|
 |RRC|1-byte|Implied addressing mode|1,Opcode fetch(4T)<br>|4T|It rotates the content of accumulator to the right without considering the carry|
-|ANA B|1-byte|Register addressing mode|1,Opcode fetch(4T)<br>|4T|It logically `And's` the content of accumulator with the content of the register B|
+|ANA B|1-byte|Register direct addressing mode|1,Opcode fetch(4T)<br>|4T|It logically `And's` the content of accumulator with the content of the register B|
 |ADI 0FH|2-byte|Immediate addressing mode|1,Opcode fetch(4T)<br>2,Memory read(3T)|7T|It immediately adds the data 0FH with the content of accumulator.|
 |LXI H, 1234H|3-byte|immediate addressing mode|1,Opcode fetch(4T)<br>2,Memory read(3T)<br>3,Memory read(3T)<br>|10T|It moves the 16-bit data 1234H immediately to the register pair H and L|
 
@@ -98,13 +98,13 @@
 - Macros are like inline functions of a Assembly lagauge program. It is a set of instruction or sequence of instruction having a specific name and can be used multiple times on the program.
 - We can create a Macro sequence instruction and give it a name which can be used later on the program whenever the set of instruction is needed.
 - A macro assembler is used to assemble the code written in macro langauge. The macro assembler replaces the instructions within the macro at the places where it finds the macro name. So macros are usefull if the instruction set used inside macro are small otherwise the size of the program will be bigger.
-- Although rather then using procedures which cause `call overhead` MACROS doesnot create any overhead.
+- Rather than using procedures which cause `call overhead` MACROS doesnot create any overhead.
 - In order to implement a macro in ALP we use the `assembler directives`: **MACRO** and **ENDM**
 
 ```js
 //Syntax:
 
-macro_name  MACRO [...]
+macro_name  MACRO [list of parameters]
               ....
             ENDM
 ```
