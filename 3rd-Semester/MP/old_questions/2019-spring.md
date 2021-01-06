@@ -236,6 +236,8 @@ Assume:
 
     Address of counter 0 = 80H
     Address of counter 1 = 81H
+    Address of counter 2 = 82H
+    Address of counter 3 = 83H
 
 then
                Frequency of Clock
@@ -253,8 +255,13 @@ then
                  //last bit=1 as the result will be in BCD
                 = 77H
 Subroutine program:
-    MVI A, 77H
-    // TODO remaining
+SQUAREWAVE:     MVI A, 77H
+                OUT 83H
+                MVI A, 00
+                OUT 81H
+                MVI A, 10
+                OUT 81H
+                RET     
 ```
 
 ## 7,
