@@ -147,13 +147,22 @@ iii, LXI B, 2075H
  
 ## 6a, Given MP with clock freqeuncy 10MHz. WAP for 8254 PIT to generate a square wave of frequency 2KHz. 
 
+
+
 ## 6b, How cascading is done to handle more than 8 interrupts using 8259A PICs?Explain
+
+[cascading 2018-fall 6a]()
 
 ## 6c, Write 8085 program for 8255 PPI to take input from input device connected to Port B and display the value of input on the output device connected to Port A of 8255 PPI
 
 ## 7
 
 ### a, Direct Memory Access Controller
+
+- DMA (Direct Memory access) is an I/O technique commanly used for high speed data transfer. In DMA the MPU releases the control buses to a device called DMA controller.
+- The DMA controller manages the data transfer between memory and peripheral devices bypassing the MPU. Simply it is a processor capabale of copying data from one location to another location in a high speed.
+- Some of the comman DMAs are 8257 DMA controller, 8237 DMA controller, etc.
+- 8237 is a programmable DMA controller used to transfer data from or to the system memory directly from external devices. _i.e memory to memory transfer is also possible_
 
 ### b, Different types of Assembler
 
@@ -166,6 +175,7 @@ iii, LXI B, 2075H
 
 |S|Z|x|AC|x|P|x|C|
 |--|--|--|--|--|--|--|--|
+
 `[Where x = don't cares]`
 
 - **Sign flag(S):** It is set if the result is a negative number.

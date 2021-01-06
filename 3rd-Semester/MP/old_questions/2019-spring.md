@@ -175,7 +175,13 @@ end
 ![Interrupt process](../photos/Interrupt-service.jpg)
  _**Figure: Interrupt process**_
 
-- In case of multiple interrupts // TODO
+- In case of multiple interrupts additional information is needed to handle them. For that there are 3 methods of doing so. Which are:-
+    1. **Polling:**
+        - In polling, the first device encountered with with IRQ bit set is the device that is to be serviced first. Appropriate ISR is called to service the same. It is easy to implement but a lot of time is wasted by interrogating the IRQ bit of all devices.
+    1. **Vectored Interrupts:**
+        - In vectored interrupts, a device requesting an interrupt identifies itself directly by sending a special code to the processor over the bus. This enables the processor to identify the device that generated the interrupt. The special code can be the starting address of the ISR or where the ISR is located in memory, and is called the interrupt vector.
+    1. **Interrupt Nesting:**
+        - In this method, I/O device is organized in a priority structure. Therefore, interrupt request from a higher priority device is recognized where as request from a lower priority device is not. To implement this each process/device (even the processor). Processor accepts interrupts only from devices/processes having priority more than it.
 
 ## 5b,
 
@@ -268,7 +274,9 @@ SQUAREWAVE:     MVI A, 77H
 
 ### a, Application of PIC 
 
-- //TODO
+- PIC(Programmbale Interrupt Controller) is a intergrated circuit that allows the Microprocessor to handle multiple interrupts request(IRQs) that may occurs simultaneously based on their priorities.
+- It is used to handle the multiple interrupts from multiple devices, which can be done by programming the priorities of the interrupts. That means the PIC is programmable and can be made into any priority based Interrupt Controller.
+- It also has the ability to cascasde`(also known as daisy-chaining)` to join more than one PIC to handle more interrupt requests than its original ability. 
 
 ### b, One pass and Two pass assemblers
 
