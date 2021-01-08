@@ -57,7 +57,7 @@ iii, LXI H, 2030H
 
 ## 2b, 
 
-[2018-Spring 2b]()
+[2018-Spring 2b](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2018-spring.md)
 
 ## 2c, Timing diagram of IN 34H
 
@@ -74,15 +74,15 @@ iii, LXI H, 2030H
 
 ## 3b,
 
-[2018-Spring 3b]()
+[2018-Spring 3b](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2018-spring.md)
 
 ## 3c,
 
-[2018-Spring 3c]()
+[2018-Spring 3c](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2018-spring.md)
 
 ## 4a,
 
-[2019-Spring 4a]()
+[2019-Spring 4a](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2019-spring.md)
 
 ## 4b,
 
@@ -90,7 +90,7 @@ iii, LXI H, 2030H
 
 ## 5a, Interrupt process. Explain vector chain and polled interrupt
 
-[Interrupt process 2019-Spring 5a]()
+[Interrupt process 2019-Spring 5a](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2019-spring.md)
 
 ## 5b, 
 
@@ -114,7 +114,7 @@ iii, LXI H, 2030H
 
 ### a,
 
-[DMA Controller 2018-Spring 7a]()
+[DMA Controller 2018-Spring 7a](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2018-spring.md)
 
 ### b, Macro Assembler
 
@@ -124,4 +124,4 @@ iii, LXI H, 2030H
 
 ### c, 
 
-[8085 flag register 2018-Spring 7c]()
+[8085 flag register 2018-Spring 7c](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2018-spring.md)

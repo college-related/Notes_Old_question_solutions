@@ -21,7 +21,7 @@
 
 ## 1b,
 
-[Same as 2012-fall 1b part 2]()
+[Same as 2012-fall 1b part 2](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2012-fall.md)
 
 ## 2a, Write function , addressing modes, size and name of machine cycles for the following instruction.
 
@@ -50,11 +50,34 @@ iii, LXI B, 2075H
 
 ## 2c, Timing diagram of MVI A, 32H
 
-[Similar as 2012-fall 2a]()
+[Similar as 2012-fall 2a](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2012-fall.md)
 
 ## 3a, What do you mean by Segmentation offset Scheme in 8086 Microprocessor. Explain with suitable example.
 
 ## 3b, WAP to subtract two 16-bit numbers and store the result in memory location starting from 2075H
+
+- Suppose the 16 bit numbers are stored in 3050 to 39054H
+
+|Memory address|Label|Instruction|Hexcode|Comment|
+|--|--|--|--|--|
+|2000H|LHLD 3050H|Hexcode of LHLD|H <-- (3050H)<br>L <--(3051H)|
+|2001H||---|50H||
+|2002H||---|30H||
+|2003H||XCHG|Hexcode of XCHG|D <--(H)<br>E <--(L)|
+|2004H||LHLD 3053H|Hexcode of LHLD|H <-- (3053H)<br>L <--(3054H)|
+|2005H||---|53H||
+|2006H||---|30H||
+|2007H||MOV A, E|Hexcode of MOV A, E|A <--(E)|
+|2008H||SUB L|Hexcode of SUB L|A <-- (A-L)|
+|2009H||STA 2075H|Hexcode of STA|2075H <-- (A)|
+|200AH||---|75H||
+|200BH||---|20H||
+|200CH||MOV A, D|Hexcode of MOV A, D|A <--(D)|
+|200DH||SBB H|Hexcode of SBB H|A <-- (A-H) with borrow|
+|200EH||STA 2076H|Hexcode of STA 2076H|2076H <-- (A)|
+|200FH||---|76H||
+|2010H||---|20H||
+|2011H||HLT|CFH|End of Program|
 
 ## 3c, Explain various assembler directives.
 
@@ -103,9 +126,43 @@ iii, LXI B, 2075H
 
 ## 4a, 
 
-[Same as 2019-spring 4a]()
+[Same as 2019-spring 4a](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2019-spring.md)
 
 ## 4b, Write a procedure program for 8086 for new line and use it to display the three different string in different lines.
+
+```js
+TITLE "Display 3 strings in different lines"
+
+.MODEL SMALL
+.STACK 100h
+
+.DATA
+    str1 DB "Hello$"
+    str2 DB 10,13, "This is in new line.$"
+    str3 DB 10,13, "Another string in new line.$"
+
+.CODE
+    main Proc
+        MOV AX, @data
+        MOV DS, AX
+
+        LEA DX, str1
+        MOV AX, 09H
+        INT 21H
+
+        LEA DX, str2
+        MOV AX, 09H
+        INT 21H
+
+        LEA DX, str3
+        MOV AX, 09H
+        INT 21H
+
+        MOV AX, 4C00H
+        INT 21H
+    main ENDP
+    END main
+```
 
 ## 5a, What are various sources of interrupts. Explain interrupt vector table in 8086 MP.
 
@@ -123,7 +180,7 @@ iii, LXI B, 2075H
         - In 8086 INT instruction and INT 21H instruction cause software interrupts.
         - In 8085 RST 0 - RST 7 instructions causes software interrupts.
 
-- 2nd part in [2019-spring 5b]()
+- 2nd part in [2019-spring 5b](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2019-spring.md##5b)
 
 ## 5b, What do you mean by address decoding? Design an address decoding circuit to interface 4K*8 RAM, 8K*8 ROM and 16K*8 RAM with starting address 0000h
 
@@ -151,7 +208,7 @@ iii, LXI B, 2075H
 
 ## 6b, How cascading is done to handle more than 8 interrupts using 8259A PICs?Explain
 
-[cascading 2018-fall 6a]()
+[cascading 2018-fall 6a](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2018-fall.md)
 
 ## 6c, Write 8085 program for 8255 PPI to take input from input device connected to Port B and display the value of input on the output device connected to Port A of 8255 PPI
 
@@ -166,7 +223,7 @@ iii, LXI B, 2075H
 
 ### b, Different types of Assembler
 
-[2019-Spring 7b]()
+[2019-Spring 7b](https://github.com/Alson33/Notes_Old_question_solutions/blob/master/3rd-Semester/MP/old_questions/2019-spring.md)
 
 ### c, 8085 flag register
 
