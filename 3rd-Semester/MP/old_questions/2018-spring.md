@@ -56,16 +56,16 @@ iii, LXI B, 2075H
 
 ## 3b, WAP to subtract two 16-bit numbers and store the result in memory location starting from 2075H
 
-- Suppose the 16 bit numbers are stored in 3050 to 39054H
+- Suppose the 16 bit numbers are stored in 3050 to 3053H
 
 |Memory address|Label|Instruction|Hexcode|Comment|
 |--|--|--|--|--|
-|2000H|LHLD 3050H|Hexcode of LHLD|H <-- (3050H)<br>L <--(3051H)|
+|2000H||LHLD 3050H|Hexcode of LHLD|H <-- (3050H)<br>L <--(3051H)|
 |2001H||---|50H||
 |2002H||---|30H||
 |2003H||XCHG|Hexcode of XCHG|D <--(H)<br>E <--(L)|
-|2004H||LHLD 3053H|Hexcode of LHLD|H <-- (3053H)<br>L <--(3054H)|
-|2005H||---|53H||
+|2004H||LHLD 3052H|Hexcode of LHLD|H <-- (3052H)<br>L <--(3053H)|
+|2005H||---|52H||
 |2006H||---|30H||
 |2007H||MOV A, E|Hexcode of MOV A, E|A <--(E)|
 |2008H||SUB L|Hexcode of SUB L|A <-- (A-L)|
