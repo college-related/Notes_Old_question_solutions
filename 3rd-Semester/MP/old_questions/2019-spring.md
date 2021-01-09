@@ -60,31 +60,30 @@
 |--|--|--|--|--|
 |0000H||MVI D, 00H|Hexcode of MVI D|D <-- 0|
 |0001H||-------|00H||
-|0002H|LOOP|MVI C, 0AH|Hexcode of MVI C|C <-- 10|
+|0002H||MVI C, 0AH|Hexcode of MVI C|C <-- 10|
 |0003H||---|0AH||
-|0004H||MOV B, C|Hexcode of MOV B, C|B <-- (C)|
-|0005H||MOV A, B|Hexcode of MOV A, B|A <--(B)|
-|0006H|SQUARE|ADD B|Hexcode of ADD B|A <--(A+B)|
-|0007H||JNC SKIP|Hexcode of JNC|Jump to SKIP if no carry|
-|0008H||---|0BH||
-|0009H||---|00H||
-|000AH||INR D|Hexcode of INR D|D <-- (D+1)|
-|000BH|SKIP|DCR B|Hexcode of DCR B|B <--(B-1)|
-|000CH||JNZ SQUARE|Hexcode of JNZ|Jump to SQUARE if B !=0|
-|000DH||---|04H||
-|000EH||---|00H||
-|000FH||DCR C|Hexcode of DCR C|C <--(C-1)|
-|0010H||JNZ LOOP|Hexcode of JNZ|Jump to LOOP if c !=0|
-|0011H||---|02H||
-|0012H||---|00H||
-|0013H||STA 2040H|Hexcode of STA|2040H <--(A)|
-|0014H||---|40H||
-|0015H||---|20H||
-|0016H||MOV A, D|Hexcode of MOV A, D|A <--(D)|
-|0017H||STA 2041H|Hexcode of STA|2041H <--(A)|
-|0018H||---|40H||
-|0019H||---|20H||
-|001AH||HLT|CFH|End of program|
+|0004H|LOOP|MOV B, C|Hexcode of MOV B, C|B <-- (C)|
+|0005H|SQUARE|ADD C|Hexcode of ADD C|A <--(A+C)|
+|0006H||JNC SKIP|Hexcode of JNC|Jump to SKIP if no carry|
+|0007H||---|0AH||
+|0008H||---|00H||
+|0009H||INR D|Hexcode of INR D|D <-- (D+1)|
+|000AH|SKIP|DCR B|Hexcode of DCR B|B <--(B-1)|
+|000BH||JNZ SQUARE|Hexcode of JNZ|Jump to SQUARE if B !=0|
+|000CH||---|05H||
+|000DH||---|00H||
+|000EH||DCR C|Hexcode of DCR C|C <--(C-1)|
+|000FH||JNZ LOOP|Hexcode of JNZ|Jump to LOOP if c !=0|
+|0010H||---|04H||
+|0011H||---|00H||
+|0012H||STA 2040H|Hexcode of STA|2040H <--(A)|
+|0013H||---|40H||
+|0014H||---|20H||
+|0015H||MOV A, D|Hexcode of MOV A, D|A <--(D)|
+|0016H||STA 2041H|Hexcode of STA|2041H <--(A)|
+|0017H||---|41H||
+|0018H||---|20H||
+|0019H||HLT|CFH|End of program|
 
 ## 3a, Indentify the size, addressing mode, T-states and function of the following instructions.
 
