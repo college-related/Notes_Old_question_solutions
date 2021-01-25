@@ -1,8 +1,6 @@
 
 # 2018-Spring
 
-[1a](#1a) | [1b](#1b) | [2a](#2a) | [2b](#2b) | [3a](#3a) | [3b](#3b) | [41](#41) | [4b](#4b) | [5a](#5a) | [5b](#5b) | [6a](#6a) | [6b](#6b) | [7](#7)
-
 ##  1a,
 
 >Abstract Data type(ADT)
@@ -13,19 +11,19 @@
 
 - Data structure is a way of storing data in a computer So that it can be used efficiently. With carefully chosen data structure we can use most efficient algorithm. Choosing of a data structure begins with the choice of an ADT(abstract data type). A well-designed data structure allows a variety of critical operations to be performed using a few resources both execution time and memory space as possible. Data structure are implemented by a programming language as data types and the reference and operations they provide. 
 
-##  1b,
+##  1b
 
->Advantage of Postfix expression over infix expression
+### Advantage of Postfix expression over infix expression. Convert given expression into Postfix. (A+B * C/D)+E * F-(G*H+I-J)
 
--   Any formula can be expressed without parenthesis.
--  It is very convenient for evaluating formulas on computer with stacks.
--  Postfix expression doesn't has the operator precedence.
--  Postfix is slightly easier to evaluate.
--  It reflects the order in which operations are performed.
--  You need to worry about the left and right associativity.
+- Advantage of postfix expression over infix expression are:-
+	- Any formula can be expressed without parenthesis.
+	- It is very convenient for evaluating formulas on computer with stacks.
+	- Postfix expression doesn't has the operator precedence.
+	- Postfix is slightly easier to evaluate.
+	- It reflects the order in which operations are performed.
+	- You need to worry about the left and right associativity.
 
->Infix to Postfix 
->(A+B * C/D)+E * F-(G*H+I-J)
+- **Converting the given infix expression to postfix expression**
 
 |**Read**|**Stack**|**Output List**|
 |---|----|---|
@@ -54,11 +52,12 @@
 |')'|-|ABC* D/+EF*+GH * I+J-|
 |`since no more character to read remaining operators are poped and pushed to output list`|-(+|ABC *D/+EF *+GH *I+J- -|
 
+**`Hence the postfix expression of (A+B*C/D)+E*F-(G*H+I-J) is ABC*D/+EF*+GH*I+J--`**
 
 
-##  2a,
+##  2a
 
->Difference Between recursion and iteration
+### Difference Between recursion and iteration. Write a recursive mechanism(algorithm) for solving Tower of Hanoi problem.
 
 |**recursion**|**iteration**|
 |---|---|
@@ -67,78 +66,46 @@
 |`return` with calling of the function is used to do recursion.|`for`, `while`, etc loop are used to do iteration.|
 |`If  else` statement is used to check the base condition.|Conditions are written inside paranthesis of the loop.|  
 
->Tower of Hanoi algorithm
-	
-	Assume we have n disks in source peg and we have 2 other pegs auxiliary and destination peg
-	
-	Step 1: Move n-1 disks from source to auxiliary peg
-	Step 2: Move nth disks from source to destination peg
-	Step 3: Move n-1 disks form auxiliary to destination peg
+- **Algorithm for tower of hanoi**
 
-## 2b,
+```java
+Assume we have N disks in source peg and we have 2 other pegs auxiliary and destination peg
 
->Advantages of Doubly Linked List(DLL)
+Step 1: Move N-1 disks from source to auxiliary peg
+Step 2: Move Nth disks from source to destination peg
+Step 3: Move N-1 disks form auxiliary to destination peg
+```
+
+## 2b
+
+### Explain the advantages of Doubly Linked List(DLL) implementation. Write algorithm for insertion and deletion in stack in linked list.
 
 - A DLL can be traversed in both forward and backward direction.
 - The deletion operation in DLL is more efficient if pointer to the node to be deleted is given
 - We can quickly insert the new node before a given node.
 
->Algorithm for Insertion in a linked list
->At the front of list
-	
-	[start = points to the first node of the list]
-	[->next stands for next node address]
-	
-	Step 1: create a new node
-	Step 2: newnode->next = start 
-	Step 3: start = newnode
+- **Algorithm for Insertion in a linked list At the front of list**
 
->Algorithm for Insertion in a linked list
->At the end of list
+```js
+[start = points to the first node of the list]
+[->next stands for next node address]
 
-	Step 1: create a new node
-	Step 2: t = start
-	Step 3: while(t->next != NULL) t=t->next
-	Step 4: t->next = newnode
+Step 1: create a new node
+Step 2: newnode->next = start 
+Step 3: start = newnode
+```
 
->Algorithm for Insertion in a linked list
->At the given position or after a node 
+- **Algorithm for Deletion in a linked list from the first of list**
 
-	Step 1: create a new node
-	Step 2: read the position of the node p
-	Step 3: t = start
-	Step 4: traverse the list up to position as
-	Step 5: newnode->next = t->next
-	Step 6: t->next = newnode
+```js
+Step 1: t1 = start
+Step 2: start = start->next
+Step 3: delete(t1)
+```
 
->Algorithm for Deletion in a linked list
->From the first of list
-
-	Step 1: t1 = start
-	Step 2: start = start->next
-	Step 3: delete(t1)
-
->Algorithm for Deletion in a linked list
->From the end of list
-
-	Step 1: t1 = start
-	Step 2: traverse the list up to n-1 node
-	Step 3: t1 = t->next
-	Step 4: t->next = t->next->next
-	Step 5: delete(t1)
-
->Algorithm for Deletion in a linked list
->From the given position
-
-	Step 1: read the position of the deleted node p
-	Step 2: traverse the list up to p-1 node 
-	Step 3: t1 = t->next
-	Step 4: t->next = t->next->next
-	Step 5: delete(t1)
-
-##  3a,
-
->Balancing AVL tree
+##  3a
+ 
+### Explain with example the different cases of balancing AVL tree after inserting a node that violets the 
 
 - An AVL tree is a BST(Binary Search Tree) that balances the height of the tree.
 - It checks the height of right and left sub tree and makes sure the difference is not more than 1.
