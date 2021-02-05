@@ -1,16 +1,14 @@
 # 2017-spring
 
-[1a](#1a) | [1b](#1b) | [2a](#2a) | [2b](#2b) | [3a](#3a) | [3b](#3b) | [41](#41) | [4b](#4b) | [5a](#5a) | [5b](#5b) | [6a](#6a) | [6b](#6b) | [7](#7)
+## 1a
 
-## 1a,
-
->Java as platform independent programming language
+### Define Java as platform independent programming language.
 
 [2018-spring#1a]()
 
-## 1b,
+## 1b
 
->Constructor
+### What is Constructor. Explain with example?
 
 - **Constructor** is a special type of method in a class that is initailized whenever a object of that class is initiated.
 - It has same name as the class name.
@@ -21,9 +19,35 @@
     - `object`
 - *Deafult Constructor* is automatically made by java when no constructor is explicitly defined.
 
-[Constructor Example]()
+```java
+public class ConstructorDemo {
+    int num;
 
-## 2a,
+    ConstructorDemo(){
+        System.out.println("1, Default Constructor");
+    }
+
+    ConstructorDemo(int num){
+        this.num = num;
+        System.out.println(this.num+", Parameterized Constructor");
+    }
+
+    ConstructorDemo(ConstructorDemo obj){
+        this.num = obj.num;
+        System.out.println((this.num+1)+", Object Constructor");
+    }
+
+    public static void main(String [] args){
+        new ConstructorDemo();
+        ConstructorDemo ob1 = new ConstructorDemo(2);
+        ConstructorDemo ob2 = new ConstructorDemo(ob1);
+    }
+}
+```
+
+## 2a
+
+### Write a program to show the usage of various data types in java.
 
 >Data Types in java
 
@@ -40,27 +64,48 @@
 
 [Data types in java example]()
 
-## 2b,
+## 2b
 
->Inheritance
+### Define Inheritance. write a program which has two classes A and B, where A should act as Parent class and B should inherit from A.
 
 [2016-Spring#7]()
 
-[Program solution]()
+```java
+public class A {
+    public void mssgFromA(){
+        System.out.println("This is class A");
+    }
+}
 
-## 3a,
+public class B extends A {
+    public void mssgFromB(){
+        System.out.println("This is class A");
+    }
 
->Exception handling
+    public static void main(String [] args){
+        B obj = new B();
+
+        obj.mssgFromA();
+        obj.mssgFromB();
+    }
+}
+```
+
+## 3a
+
+### Define Exception handling with Example.
 
 [2016-Spring#3a]()
 
-## 3b,
+## 3b
+
+### Create a Frame which has three textfield and one button. When user clicks on button it should calculate sum of value of first and second textfield and display on third textfield.
 
 [Solution 2018-fall#SumandDiffDemo]()
 
-## 4a,
+## 4a
 
->Difference between interface and class
+### What is difference between interface and class? Explain with an example.
 
 |**Interface**|**Class**|
 |--|--|
@@ -69,29 +114,138 @@
 |Full `Abstraction` is obtained.|Some `Abstraction` is obtained using scope modifiers.|
 |Multiple inheritance is supported.|Multiple inheritance is not supported.|
 
-## 4b,
+```java
+interface InterA {
+    public void dis();
+}
+
+class Demo implements InterA {
+    public void dis(){
+        System.out.println("This is a implementation of Interface");
+    }
+
+    public static void main(String [] args){
+        Demo ob = new Demo();
+
+        ob.dis();
+    }
+}
+```
+
+```java
+class Demo {
+    public void dis(){
+        System.out.println("This is a normal class");
+    }
+
+    public static void main(String [] args){
+        Demo ob = new Demo();
+
+        ob.dis();
+    }
+}
+```
+
+## 4b
+
+### Write a program to read content from file "abc.txt" and store it in "xyz.txt".
 
 [Read content from abc.txt file and store in xyz.txt file]()
 
-## 5a,
+## 5a
 
->Applet and its life cycle
+### What are Applets? Define applet life cycle with example.
 
 [2016-spring#4a]()
 
-## 5b,
+## 5b
 
-[Send "Message from Pokhara University" from client to server]()
+### Write a program to send "Message from Pokhara University" from client to server using java socket programming.
 
-## 6a,
+```java
+// Client side
+import java.net.*;
+import java.io.*;
 
->JDBC
+public class ClientSide {
+    public static void main(String [] args){
+        try {
+        
+        Socket s = new Socket("localhost", 3333);
 
-[Update solution]()
+        DataOutputStream dout = new DataOutputStream(s.getOutputStream());
 
-## 6b,
+        dout.writeUTF("Message From Pokhara University");
+        dout.close();
+        s.close();
 
->Difference Between Frame and Swing
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+}
+```
+
+```java
+// Server side
+import java.net.*;
+import java.io.*;
+
+public class ServerSide {
+    public static void main(String [] args){
+        try {
+            
+            SocketServer ss = new SocketServer(3333);
+            Socket s = ss.accept();
+
+            DataInputStream din = new DataInputStream(s.getInputStream());
+
+            System.out.println("Client says: " + din.readUTF());
+
+            din.close();
+            s.close();
+            ss.close();
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+}
+```
+
+## 6a
+
+### Define JDBC. Write a program to update data on following table
+### Table: student
+###         Column:
+###         NAME TYPE
+###         id   number
+###         name varchar
+###         age  number
+
+```java
+import java.sql.*;
+
+public class UpdateDemo {
+    public static void main(String [] args) throws ClassNotFoundException, SQLException{
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "");
+
+        Statement st = con.createStatement();
+
+        String update = "Update student set age=20, name='Alson' where id=2";
+
+        int num = st.executeUpdate(update);
+
+        System.out.println(num+" rows updated");
+    }
+}
+```
+
+## 6b
+
+### Difference Between Frame and Swing?
 
 |**Frame/AWT**|**JFrame/Swing**|
 |--|--|
@@ -101,15 +255,15 @@
 |They are platform dependent.|They are platform independent.|
 |AWT is a thin layer of code on top of the OS.|Swing is much larger and also has very richer functionality.|
 
-## 7,
-
->JRE
+## 7a, JRE
 
 - JRE(Java Runtime Environment) is a software that makes an environment for java programs to run without having to contact with the compiler of OS.
 - It is used to create class file from a java source code(.java file).
 - The class file contains the bytecode which is converted to an executable file using JVM.
 
->Result Set
+## 7a, Event handling
+
+## 7c, Result Set
 
 - ResultSet is the java objaect that contains the result of executing SQL query. 
 - In othet words it contains the rows that satisfy the conditions of the query.

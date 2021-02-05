@@ -1,18 +1,16 @@
 # 2015-Spring
 
-[1a](#1a) | [1b](#1b) | [2a](#2a) | [2b](#2b) | [3a](#3a) | [3b](#3b) | [41](#41) | [4b](#4b) | [5a](#5a) | [5b](#5b) | [6a](#6a) | [6b](#6b) | [7](#7)
+## 1a
 
-## 1a,
-
->Is JVM machine independent?
+### Is JVM machine independent? Explain the use of JVM. How JVM makes Java machine independent.
 
 - No, JVM is not machine independent. It is actually machie dependent and makes Java a machine independent laguage.
 - It is done so, by downloading the corresponding codes for the corresponding OS when we download the JDK.
 - So, the class file or `bytecode` of a java file is interpreted by the JVM as per the need of OS.
 
-## 1b,
+## 1b
 
->Why multiple inheritance is not suported in Java?
+### Why multiple inheritance is not supported in Java. Provide a simple code example to support your answer.
 
 - Because of the ambiguity that is created when multiple inheritance is done.
 - If two classes have functions with same name then the base class that inherits from both those classes will have two functions with same name. Hence creating a confusion when calling the method. It is called as `ambiguity`.
@@ -36,23 +34,23 @@
                 }
             }
 
-## 2a,
+## 2a
 
->Reflection and its usage.
+### What is Reflection? Why do we need reflection? Explain with a program.
 
 [2011-Fall#2b]()
 
     Example:
 
-## 2b,
+## 2b
 
->Custom Exception in java
+### How can you create your own exception in java? Explain with sample code.
 
 [2018-Spring#3a]()
 
-## 3a,
+## 3a
 
->Sandbox Security model
+### Discuss about the Sandbox Security model with regard to Java Applet.
 
 - Sandbox Security model is a security mechanism for separating running program, usually inorder to minimize system failure or software vulnerabilities from spreading.
 - It is used by software developers to test new programming code.
@@ -61,15 +59,15 @@
 
 - A sandbox typically provides a tightly controlled set of resources for guest programs to run into, such as limited space on disk and memory.
 
-## 3b,
+## 3b
 
->Displaying image in applet
+### Explain how to display a picture in applet
 
 [Code at 2018-Spring]()
 
-## 3c,
+## 3c
 
->Difference between GridBag and Grid Layout
+### Difference between GridBag and Grid Layout
 
 |**GridBag Layout**|**Grid Layout**|
 |--|--|
@@ -78,23 +76,23 @@
 |`GridBagConstraints` objects must be used to make a GridBag layout.|`GridLayout` class is used to make object of it.|
 |It is more flexible.|It is less flexible.|
 
-## 4a,
+## 4a
 
->Difference between AWT and Swing
+### Difference between AWT and Swing package in Java? Write a sample code for creating a closable frame in the front and centre of your desktop.
 
 [2017-Spring#6b]()
 
->Closable frame
-
 [Solution at 2011-Fall]()
 
-## 4b,
+## 4b
+
+### Write a program to draw a Bar Chart of the total number of students appearing exam in Java. Also provide Bar Chart for number of male and female students.
 
 [Bar chart at 2014-spring]()
 
-## 5a,
+## 5a
 
->URL
+### What is URL. Write a Java program for reading contents in a given URL.
 
 [2014-Spring#5a]()
 
@@ -102,13 +100,15 @@
 
 [Solution at 2018-Fall]()
 
-## 5b,
+## 5b
+
+### Write a client program which connects with server running at port 5000 and send "I am client" message to server and also print received message from server in console. (Assume TCP/IP communication)
 
 [Program solution at 2016-Fall]()
 
-## 6a,
+## 6a
 
->Difference between Simple Statements amd Prepared Statements.
+### Difference between Simple Statements and Prepared Statements. Provide an example to illustrate their differences.
 
 |**Simple Statements**|**Prepared Statements**|
 |--|--|
@@ -123,17 +123,19 @@
 
 [Prepared Statement example]()
 
-## 7
+## 6b
 
->JIT compile
+### Write a simple Java program to connect database and read data in the table named "Student" which have four fields named "id", "name", "address", "DOB" and "Class". Assuming the "id" field as simple number, display the data of the students with id less than 100.
+
+## 7a, JIT compile
 
 - JIT(Just In Time) compiler is a feature of the runtime interpreter that instead of interpreting bytecode everytime a method os invoked, but will compile the bytecode into the machine code instructions of the running machine and then invokes this object code instead.
 - Ideally the efficiency of running object code which overcome the inefficiency of recompiling the program every time it runs.
 
->Repaint method
+## 7b, Repaint method
 
 - The `repaint()` method causes the AWT runtime system to execute the `update()` method of the component class which clears the window with the background color of the applet and then call the `paint()` method.
 
->Inner Class
+## 7c, Inner Class
 
 [2018-Spring#7]()

@@ -1,8 +1,8 @@
 # 2015-Fall
 
-## 1a,
+## 1a
 
->Class file
+### What is a Class file? Differentiate between assignment and initialize with suitable example.
 
 - A java class file is a file containing java `bytecode` and having `.class` extension that ican be executed by the JVM.
 - A java class is created by java compiler from `.java` files as a result of successful compilation.
@@ -16,37 +16,42 @@
 |Before assignment objects or variable may have null, 0, false or any other values.|Before initailization objects or variable may have null,0,or false.|
 |Example: int num=3; num = 9;//assigment|Example: int num = 2;//initailization|
 
-## 1b,
+## 1b
 
->Difference between abstract class and interface
+### Difference between abstract class and interface in java. Provide examples for each of them.
 
 [2011-Fall#1b]()
 
-## 2a,
+## 2a
+
+### Implement an abstract class named Book and two subclasses named Novel and Magazine. A Book has a name, author, total page and publisher. Book have an abstract method called getBookType(). Novel and Magazine have field to determine their type. Implement the above classes in Java. Provide Constructors for classes to initialize private varibales.
+### Write an application to create objects of type Novel and Magazine and invoke the methods in them.
 
 [Solution abstract class]()
 
-## 2b,
+## 2b
 
->Exception
+### What are exception? Write a  program to read a string from the console and display it in the console.
 
 [2016-Spring#3a]()
 
 [Solution to read string from console and print it in the console.]()
 
-## 3a,
+## 3a
 
->Difference between applet and application
+### Difference between applet and application. Can we convert an application to applet? Explain with an example.
 
 [2018-spring#3b]()
 
-## 3b,
+## 3b
+
+### Write a program to create a frame in swing. The frame should contain three textfields with labels arg1, arg2 and result respectively, a menu called file with sub menus add, subtract and close.
 
 [Solution of the frame question]()
 
-## 4a,
+## 4a
 
->5 event listener with methods
+### Explain any 5 event listener in java with methods
 
 - A Listener is an object that is notified when an event occurs.
 - a.k.a Event Handler. (also known as)
@@ -79,29 +84,33 @@
         - `void mousePressed(MouseEvent me)`
         - `void mouseReleased(MouseEvent me)`
 
-## 4b,
+## 4b
 
->Relation between repaint() method and update() and paint() method
+### Explain the relation of repaint() method with update() and paint(). Write a program showing the working of repaint() method.
 
 [2015-Spring#7]()
 
-## 5a,
+## 5a
+
+### Write a program to connect to a database using JDBC. Assume that database name is test_Db and it has table named employee with 2 records.
 
 [Solution at 2018-Fall]()
 
-## 5b,
+## 5b
 
->Types of JDBC driver
+### Explain different types of JDBC driver
 
 [2018-Spring#7]()
 
-## 6a,
+## 6a
+
+### Write a simple java program of TCP client and Server communication with exceptions handled.
 
 [communication program at 2016-Fall]()
 
-## 6b,
+## 6b
 
->Socket
+### Write about: Socket, port IP Address and URL in java
 
 [2016-Fall#5a]()
 
@@ -120,19 +129,17 @@
 
 [2014-Spring#5a]()
 
-## 7,
-
->Benifits of Java
+## 7a, Benifits of Java
 
 - More Secure than other OOP langauge.
 - Features like package, etc making its code reusable easy.
 - Its platform independent. So, easy to transport code.
 - Fully object oriented yet easy to learn.
 
->Reflection in Java
+## 7b, Reflection in Java
 
 [2011-Fall#2b]()
 
->Graphics object
+ ## 7c, Graphics object
 
 [2013-fall#7]()

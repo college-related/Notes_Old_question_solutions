@@ -1,28 +1,42 @@
 # 2013-Fall
 
-[1a](#1a) | [1b](#1b) | [2a](#2a) | [2b](#2b) | [3a](#3a) | [3b](#3b) | [41](#41) | [4b](#4b) | [5a](#5a) | [5b](#5b) | [6a](#6a) | [6b](#6b) | [7](#7)
+## 1a
 
-## 1a, Java more secure than other programming language
+### How Java is more secure than other programming language? Explain.
 
-- 
+## 1b
 
-## 1b,
+### Write a java program to generate the following triangle using for loop.
+### 1
+### 0 1
+### 1 0 1
+### 0 1 0 1
 
 [traingle program]()
 
-## 2a, Uses of interface
+## 1c
 
-### Implementation of interface
+### Explain the uses of super and this keyword with suitable example.
 
-## 2b,
+## 2a
+
+### What are the significant uses of interface? Explain how it is implemented in java.
+
+## 2b
+
+### Write a function that takes an array of integers as an argument and returns the sum of even numbers in that array.
 
 [Solution]()
 
-## 3a, User defined execption
+## 3a
+
+### Explain User defined execption with suitable java code.
 
 [2018-spring#3a]()
 
-## 3b, User defined package
+## 3b
+
+### What is a User defined package? Illustrate the process of defining and using define package with suitable example.
 
 - A `package` is a pack or group of classes, interfaces and other packages.
 - It is a constraint for classes.
@@ -50,48 +64,54 @@ class DemoClass extends ClassName {
 }
 ```
 
-## 4a,
+## 4a
+
+### What is an Applet? Write an applet program to play an audio file. The name of audio file is supplied from HTML tag.
 
 [ applet related question in 2016-Spring#4a]()
 
 [audio file in 2018-spring]()
 
-## 4b, Event
+## 4b
 
-### Models for event handling
+### What is an event? Briefly explain the models avialable for event handling
 
-## 5a, URL class vs URL connection class
+## 5a
+
+### Write down the significant uses of URL and URL connection classes.
 
 [2014-spring#5a]()
 
-## 5b, Difference between TCP/IP Programming and Datagram Programming
+## 5b
+
+### What is the difference between TCP/IP Programming and Datagram Programming? Briefly explain the Classes and Methods that are used to create a TCP/IP Server application.
 
 [2018-spring#5a]()
 
-## 6a, Steps for making connection with database
+## 6a 
+
+### What are the steps involved for making a connection with a database. Write a Java program to extract and display the information in console from ABC table of Ms-access with suitable values. The ABC table has AAA and BBB fields.
 
 [Solution at 2014-spring]()
 
-## 6b, JDBC
+## 6b
+
+## Define JDBC and ODBC. Briefly ecplain the different types of JDBC driver.
 
 - JDBC(Java Database Connectivity) is an Application Programming InterFace(API) for the langauge Java which defines how a client may access a database.
 - It is a java based access technology used for java database.
-
-### ODBC
 
 - ODBC(Open Database Connectivity) is a standard Application Programming InterFace(API) for accessing Database Managment Systems(DBMS).
 - It is  database system and operating system independent API.
 - The application written in ODBC can be ported to other platforms both on client and server side with few changes to the data access code.
 
-### Types of Drivers
-
 [2018-Spring#7]()
 
-## 7, Dynamic Dispatching
+## 7a, Dynamic Dispatching
 
 - Dynamic Dispatching means `runtime polymorphism`.
 
-### Layout Management
+## 7b, Layout Management
 
 - Layout manager/management are the objects that are used to arrange components in a particular manner.
 - `LayoutManager` is an interface that is implemented by all classes of layout manager.
@@ -101,7 +121,7 @@ class DemoClass extends ClassName {
     - GridLayout
     - GridBagLayout
 
-### Graphics object
+## 7c, Graphics object
 
 - Graphic object represents a GDI+drawing surface and is the object that is used to create graphical images.
 - We can use the method of the `Graphic class` with Graphic object to draw lines and shapes, render text, display or manipulate image.
